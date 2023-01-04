@@ -10,9 +10,9 @@ import cv2
 from os.path import exists, splitext
 import tensorflow.keras.models as tkm
 import tensorflow.keras.layers as tkl
-from augmentation_landmarks import ImgLandmarks68RandomHorizontalFlip, create_trans_vector, create_rot_vector, rotate_landmarks, translate_landmarks, rotate_img, translate_img
-from losses_landmarks import heatmap_loss, landmark_loss, wing_loss, heatmaps_from_points
-from test_landmarks import test_nme 
+from augmentation import ImgLandmarks68RandomHorizontalFlip, create_trans_vector, create_rot_vector, rotate_landmarks, translate_landmarks, rotate_img, translate_img
+from losses import heatmap_loss, landmark_loss, wing_loss, heatmaps_from_points
+from test import test_nme 
 
 def train_and_checkpoints(epochs, train_dataset,valid_dataset,test_dataset, li_loss_totale, li_loss_valid,nme, model, batch_size , lr=5e-4 , optimizer = tf.keras.optimizers.Adam(learning_rate=5e-4) ):    
 

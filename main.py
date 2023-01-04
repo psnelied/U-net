@@ -1,8 +1,8 @@
-from train_landmarks import train_and_checkpoints
+from train import train_and_checkpoints
 import os 
 import tensorflow as tf
-from datasets_landmarks import gen_300WLP_with_landmarks
-from model_landmarks import U_net
+from datasets import gen_300WLP_with_landmarks
+from model import U_net
 import pandas as pd 
 
 
